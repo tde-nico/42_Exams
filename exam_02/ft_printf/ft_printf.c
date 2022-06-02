@@ -11,7 +11,7 @@ int	ft_putnbr(unsigned int n, int base)
 	int	i;
 
 	i = 0;
-	if (n > base)
+	if (n > (unsigned int)base)
 		i += ft_putnbr(n / base, base);
 	return (i + write(1, &"0123456789abcdef"[n % base], 1));
 }
