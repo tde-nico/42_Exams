@@ -30,15 +30,17 @@ int	ft_putstr(char *str)
 
 int	ft_putint(int n)
 {
-	int	count;
+	int		count;
+	long	num;
 
 	count = 0;
-	if (n < 0)
+	num = (long)n;
+	if (num < 0)
 	{
 		count += ft_putchar('-');
-		n *= -1;
+		num *= -1;
 	}
-	count += ft_putnbr(n, 10);
+	count += ft_putnbr(num, 10);
 	return (count);
 }
 
